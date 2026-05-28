@@ -60,6 +60,8 @@ Financial-Fraud-Detection/
 │   ├── img_roc_comparison.png
 │   ├── img_model_comparison.png
 │   └── img_feature_importance.png
+│   └── > Note: fraud_predictions.csv is generated locally by running the notebook. 
+│       > It is excluded from the repo due to file size (154MB).
 │
 ├── dashboard/
 │   └── app.py                             ← Streamlit dashboard (5 pages)

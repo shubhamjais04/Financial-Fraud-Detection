@@ -32,6 +32,7 @@ Credit card and financial fraud causes billions of dollars in losses globally ev
 ---
 
 ## 📁 Project Structure
+```
 Financial-Fraud-Detection/
 │
 ├── data/
@@ -64,6 +65,7 @@ Financial-Fraud-Detection/
 │   └── app.py                             ← Streamlit dashboard (5 pages)
 │
 └── README.md
+```
 ---
 
 ## 📊 Dataset
@@ -244,24 +246,6 @@ streamlit run app.py
 
 ---
 
-## 💡 Key Learnings
-
-- Handling severe class imbalance in real-world fraud datasets using SMOTE
-- Comparing supervised vs unsupervised anomaly detection approaches
-- Building a complete ML pipeline from raw data to deployed dashboard
-- Importance of Recall over Accuracy in fraud detection (minimizing false negatives)
-- Feature engineering from datetime columns to improve model performance
-
----
-
-## 🔮 Future Improvements
-
-- Integrate Apache Kafka for real-time transaction stream processing
-- Add LSTM-based deep learning model for sequential fraud pattern detection
-- Deploy dashboard on Streamlit Cloud for public access
-- Add email alerting system for high-risk transactions
-- Implement MLflow for experiment tracking and model versioning
-
 ---
 
 ## 👨‍💻 Author
@@ -271,8 +255,6 @@ Data Science Intern — Amdox Technologies
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-shubhjais04-blue?style=flat&logo=linkedin)](https://linkedin.com/in/shubhjais04)
 [![GitHub](https://img.shields.io/badge/GitHub-shubhamjais04-black?style=flat&logo=github)](https://github.com/shubhamjais04)
-[![Kaggle](https://img.shields.io/badge/Kaggle-shubhamjaiswal04-20BEFF?style=flat&logo=kaggle)](https://kaggle.com/shubhamjaiswal04)
 
 ---
 
-> *Built with 💙 during internship at Amdox Technologies, May 2026*

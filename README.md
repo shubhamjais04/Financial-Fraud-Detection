@@ -232,15 +232,15 @@ streamlit run app.py
 
 ## 📷 Screenshots
 
-> Add screenshots of your dashboard pages here after running the project.
-
-| Overview Page | EDA Page |
+| Overview | EDA & Patterns |
 |---|---|
-| ![Overview](exports/img_01_fraud_distribution.png) | ![EDA](exports/img_03_fraud_rate_categorical.png) |
+| ![Overview](exports/dashboard_overview.png) | ![EDA](exports/dashboard_eda.png) |
 
-| ROC Curve | Feature Importance |
+| Model Performance | Live Prediction |
 |---|---|
-| ![ROC](exports/img_roc_comparison.png) | ![FI](exports/img_feature_importance.png) |
+| ![Models](exports/dashboard_model_performance.png) | ![Live](exports/dashboard_live_prediction.png) |
+
+![Transaction Table](exports/dashboard_transaction_table.png)
 
 ---
 

@@ -32,6 +32,7 @@ Credit card and financial fraud causes billions of dollars in losses globally ev
 ---
 
 ## 📁 Project Structure
+```
 Financial-Fraud-Detection/
 │
 ├── data/
@@ -64,6 +65,7 @@ Financial-Fraud-Detection/
 │   └── app.py                             ← Streamlit dashboard (5 pages)
 │
 └── README.md
+```
 ---
 
 ## 📊 Dataset

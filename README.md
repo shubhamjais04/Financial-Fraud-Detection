@@ -153,15 +153,13 @@ Financial-Fraud-Detection/
 
 | Model | Accuracy | ROC-AUC |
 |---|---|---|
-| Logistic Regression | -- | -- |
-| Decision Tree | -- | -- |
-| Random Forest | -- | -- |
-| XGBoost ⭐ | -- | -- |
-| Isolation Forest | -- | -- |
+| Logistic Regression | 98.60% | 0.9720 |
+| Decision Tree | 99.33% | 0.8921 |
+| Random Forest ⭐ | 99.90% | 0.9829 |
+| XGBoost | 98.91% | 0.9825 |
+| Isolation Forest | 99.83% | 0.9079 |
 
 > ⭐ Best performing model saved to `models/best_model.pkl`
-> 
-> Fill in actual scores from your notebook Cell 29 output.
 
 ---
 

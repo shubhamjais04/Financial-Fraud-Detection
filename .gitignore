@@ -3,5 +3,5 @@ data/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-models/*.pkl
+models/best_model_large.pkl
 exports/fraud_predictions.csv

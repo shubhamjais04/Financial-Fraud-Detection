@@ -1,5 +1,5 @@
 # 🔍 Financial Fraud Detection System
-### Internship Project — Amdox Technologies | May 2026
+### Internship Project — Amdox Technologies 
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=flat&logo=python)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.4-orange?style=flat&logo=scikit-learn)

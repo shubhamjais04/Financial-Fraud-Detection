@@ -235,13 +235,13 @@ streamlit run app.py
 
 | Overview | EDA & Patterns |
 |---|---|
-| ![Overview](exports/dashboard_overview.png) | ![EDA](exports/dashboard_eda.png) |
+| ![Overview](screenshots/dashboard_overview.png) | ![EDA](screenshots/dashboard_eda.png) |
 
 | Model Performance | Live Prediction |
 |---|---|
-| ![Models](exports/dashboard_model_performance.png) | ![Live](exports/dashboard_live_prediction.png) |
+| ![Models](screenshots/dashboard_model_performance.png) | ![Live](screenshots/dashboard_live_prediction.png) |
 
-![Transaction Table](exports/dashboard_transaction_table.png)
+![Transaction Table](screenshots/dashboard_transaction_table.png)
 
 ---
 

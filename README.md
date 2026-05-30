@@ -56,6 +56,10 @@ Financial-Fraud-Detection/
 ├── notebooks/
 │   └── Financial_Fraud_Detection.ipynb
 │
+├──reports/
+│   ├── Financial_Fraud_Detection_Presentation.pptx
+│   └── Financial_Fraud_Detection_Presentation.pdf
+│
 ├── screenshots/
 │   ├── dashboard_eda.png
 │   ├── dashboard_live_prediction.png

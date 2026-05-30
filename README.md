@@ -7,6 +7,8 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.35-FF4B4B?style=flat&logo=streamlit)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat)
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-FF4B4B?style=flat&logo=streamlit)](https://fraud-detection-amdox.streamlit.app)
+
 ---
 
 ## 📌 Overview

@@ -256,7 +256,7 @@ elif page == "🤖 Model Performance":
         st.image('../exports/notebook_charts/img_roc_comparison.png', caption='ROC Curve Comparison')
     with col4:
         st.image('../exports/notebook_charts/img_feature_importance.png', caption='Feature Importance')
-    st.image('../exports/notebook_charts/img_model_comparison.png', caption='Model Accuracy & AUC Comparison')
+        st.image('../exports/notebook_charts/img_model_comparison.png', caption='Model Accuracy & AUC Comparison')
 
 # ── PAGE 4: LIVE PREDICTION ───────────────────────────────────
 elif page == "🔎 Live Prediction":

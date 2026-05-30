@@ -251,12 +251,15 @@ elif page == "🤖 Model Performance":
         st.plotly_chart(fig2, use_container_width=True)
 
     st.subheader("Saved Charts from Notebook")
+    import os
+    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
     col3, col4 = st.columns(2)
     with col3:
-        st.image('../exports/notebook_charts/img_roc_comparison.png', caption='ROC Curve Comparison')
+        st.image(os.path.join(base, 'exports/notebook_charts/img_roc_comparison.png'), caption='ROC Curve Comparison')
     with col4:
-        st.image('../exports/notebook_charts/img_feature_importance.png', caption='Feature Importance')
-        st.image('../exports/notebook_charts/img_model_comparison.png', caption='Model Accuracy & AUC Comparison')
+        st.image(os.path.join(base, 'exports/notebook_charts/img_feature_importance.png'), caption='Feature Importance')
+    st.image(os.path.join(base, 'exports/notebook_charts/img_model_comparison.png'), caption='Model Accuracy & AUC Comparison')
 
 # ── PAGE 4: LIVE PREDICTION ───────────────────────────────────
 elif page == "🔎 Live Prediction":

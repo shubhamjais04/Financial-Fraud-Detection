@@ -1,5 +1,5 @@
 # 🔍 Financial Fraud Detection System
-### Internship Project — Amdox Technologies | May 2026
+### Internship Project — Amdox Technologies 
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=flat&logo=python)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.4-orange?style=flat&logo=scikit-learn)
@@ -35,35 +35,38 @@ Credit card and financial fraud causes billions of dollars in losses globally ev
 ```
 Financial-Fraud-Detection/
 │
-├── dashboard/
-│   ├── app.py
-│   └── requirements.txt
-│
-├── data/                          ← gitignored
-│   └── creditcard.csv
-│
-├── exports/
-│   ├── notebook_charts/
-│   └── fraud_predictions.csv      ← gitignored
-│
-├── models/
-│   ├── best_model.pkl
-│   ├── label_encoders.pkl
-│   └── scaler.pkl
+├── data/
+│   └── synthetic_fraud_dataset1.csv       ← Raw dataset (50,000 transactions)
 │
 ├── notebooks/
-│   └── Financial_Fraud_Detection.ipynb
+│   └── Financial_Fraud_Detection.ipynb    ← Complete EDA + ML pipeline
 │
-├── screenshots/
-│   ├── dashboard_eda.png
-│   ├── dashboard_live_prediction.png
-│   ├── dashboard_model_performance.png
-│   ├── dashboard_overview.png
-│   └── dashboard_transaction_table.png
+├── models/
+│   ├── best_model.pkl                     ← Best trained model (serialized)
+│   └── scaler.pkl                         ← StandardScaler (serialized)
 │
-├── .gitignore
-├── README.md
-└── requirements.txt
+├── exports/
+│   ├── fraud_predictions.csv              ← Model predictions + risk levels
+│   ├── img_01_fraud_distribution.png
+│   ├── img_02_amount_distribution.png
+│   ├── img_03_fraud_rate_categorical.png
+│   ├── img_04_correlation_heatmap.png
+│   ├── img_05_smote_distribution.png
+│   ├── img_confusion_Logistic_Regression.png
+│   ├── img_confusion_Decision_Tree.png
+│   ├── img_confusion_Random_Forest.png
+│   ├── img_confusion_XGBoost.png
+│   ├── img_confusion_Isolation_Forest.png
+│   ├── img_roc_comparison.png
+│   ├── img_model_comparison.png
+│   └── img_feature_importance.png
+│   └── > Note: fraud_predictions.csv is generated locally by running the notebook. 
+│       > It is excluded from the repo due to file size (154MB).
+│
+├── dashboard/
+│   └── app.py                             ← Streamlit dashboard (5 pages)
+│
+└── README.md
 ```
 ---
 
@@ -233,13 +236,13 @@ streamlit run app.py
 
 | Overview | EDA & Patterns |
 |---|---|
-| ![Overview](screenshots/dashboard_overview.png) | ![EDA](screenshots/dashboard_eda.png) |
+| ![Overview](exports/dashboard_overview.png) | ![EDA](exports/dashboard_eda.png) |
 
 | Model Performance | Live Prediction |
 |---|---|
-| ![Models](screenshots/dashboard_model_performance.png) | ![Live](screenshots/dashboard_live_prediction.png) |
+| ![Models](exports/dashboard_model_performance.png) | ![Live](exports/dashboard_live_prediction.png) |
 
-![Transaction Table](screenshots/dashboard_transaction_table.png)
+![Transaction Table](exports/dashboard_transaction_table.png)
 
 ---
 

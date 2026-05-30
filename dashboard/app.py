@@ -210,10 +210,10 @@ elif page == "🤖 Model Performance":
     st.subheader("Saved Charts from Notebook")
     col3, col4 = st.columns(2)
     with col3:
-        st.image('../exports/img_roc_comparison.png', caption='ROC Curve Comparison')
+        st.image('../exports/notebook_charts/img_roc_comparison.png', caption='ROC Curve Comparison')
     with col4:
-        st.image('../exports/img_feature_importance.png', caption='Feature Importance')
-    st.image('../exports/img_model_comparison.png', caption='Model Accuracy & AUC Comparison')
+        st.image('../exports/notebook_charts/img_feature_importance.png', caption='Feature Importance')
+    st.image('../exports/notebook_charts/img_model_comparison.png', caption='Model Accuracy & AUC Comparison')
 
 # ── PAGE 4: LIVE PREDICTION ───────────────────────────────────
 elif page == "🔎 Live Prediction":

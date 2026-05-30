@@ -35,36 +35,35 @@ Credit card and financial fraud causes billions of dollars in losses globally ev
 ```
 Financial-Fraud-Detection/
 │
-├── data/
-│   └── synthetic_fraud_dataset1.csv       ← Raw dataset (50,000 transactions)
+├── dashboard/
+│   ├── app.py
+│   └── requirements.txt
 │
-├── notebooks/
-│   └── Financial_Fraud_Detection.ipynb    ← Complete EDA + ML pipeline
-│
-├── models/
-│   ├── best_model.pkl                     ← Best trained model (serialized)
-│   └── scaler.pkl                         ← StandardScaler (serialized)
+├── data/                          ← gitignored
+│   └── creditcard.csv
 │
 ├── exports/
-│   ├── fraud_predictions.csv              ← Model predictions + risk levels
-│   ├── img_01_fraud_distribution.png
-│   ├── img_02_amount_distribution.png
-│   ├── img_03_fraud_rate_categorical.png
-│   ├── img_04_correlation_heatmap.png
-│   ├── img_05_smote_distribution.png
-│   ├── img_confusion_Logistic_Regression.png
-│   ├── img_confusion_Decision_Tree.png
-│   ├── img_confusion_Random_Forest.png
-│   ├── img_confusion_XGBoost.png
-│   ├── img_confusion_Isolation_Forest.png
-│   ├── img_roc_comparison.png
-│   ├── img_model_comparison.png
-│   └── img_feature_importance.png
+│   ├── notebook_charts/
+│   └── fraud_predictions.csv      ← gitignored
 │
-├── dashboard/
-│   └── app.py                             ← Streamlit dashboard (5 pages)
+├── models/
+│   ├── best_model.pkl
+│   ├── label_encoders.pkl
+│   └── scaler.pkl
 │
-└── README.md
+├── notebooks/
+│   └── Financial_Fraud_Detection.ipynb
+│
+├── screenshots/
+│   ├── dashboard_eda.png
+│   ├── dashboard_live_prediction.png
+│   ├── dashboard_model_performance.png
+│   ├── dashboard_overview.png
+│   └── dashboard_transaction_table.png
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
 ```
 ---
 
@@ -234,13 +233,13 @@ streamlit run app.py
 
 | Overview | EDA & Patterns |
 |---|---|
-| ![Overview](exports/dashboard_overview.png) | ![EDA](exports/dashboard_eda.png) |
+| ![Overview](screenshots/dashboard_overview.png) | ![EDA](screenshots/dashboard_eda.png) |
 
 | Model Performance | Live Prediction |
 |---|---|
-| ![Models](exports/dashboard_model_performance.png) | ![Live](exports/dashboard_live_prediction.png) |
+| ![Models](screenshots/dashboard_model_performance.png) | ![Live](screenshots/dashboard_live_prediction.png) |
 
-![Transaction Table](exports/dashboard_transaction_table.png)
+![Transaction Table](screenshots/dashboard_transaction_table.png)
 
 ---
 

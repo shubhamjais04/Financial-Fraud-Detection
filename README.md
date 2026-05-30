@@ -254,7 +254,7 @@ streamlit run app.py
 ## 👨‍💻 Author
 
 **Shubham Jaiswal**    
-Data Science Intern — Amdox Technologies  
+Data Science & Analytics Intern — Amdox Technologies  
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-shubhjais04-blue?style=flat&logo=linkedin)](https://linkedin.com/in/shubhjais04)
 [![GitHub](https://img.shields.io/badge/GitHub-shubhamjais04-black?style=flat&logo=github)](https://github.com/shubhamjais04)

@@ -1,5 +1,4 @@
 # 🔍 Financial Fraud Detection System
-### Internship Project — Amdox Technologies 
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=flat&logo=python)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.4-orange?style=flat&logo=scikit-learn)
@@ -257,6 +256,7 @@ streamlit run app.py
 Data Science & Analytics Intern — Amdox Technologies  
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-shubhjais04-blue?style=flat&logo=linkedin)](https://linkedin.com/in/shubhjais04)
+[![Gmail](https://img.shields.io/badge/Gmail-shubhjais.in@gmail.com-D14836?style=flat&logo=gmail)](mailto:shubhjais.in@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-shubhamjais04-black?style=flat&logo=github)](https://github.com/shubhamjais04)
 
 ---

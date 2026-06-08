@@ -229,6 +229,7 @@ Data Science & Analytics Intern — Amdox Technologies
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-shubhjais04-blue?style=flat&logo=linkedin)](https://linkedin.com/in/shubhjais04)
 [![Gmail](https://img.shields.io/badge/Gmail-shubhjais.in@gmail.com-D14836?style=flat&logo=gmail)](mailto:shubhjais.in@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-shubhamjais04-black?style=flat&logo=github)](https://github.com/shubhamjais04)
+[![Kaggle](https://img.shields.io/badge/Kaggle-shubhamjaiswal04-20BEFF?style=flat&logo=kaggle)](https://www.kaggle.com/shubhamjaiswal04)
 
 ---
 

@@ -1,12 +1,19 @@
 # 🔍 Financial Fraud Detection System
 
-![Python](https://img.shields.io/badge/Python-3.12-blue?style=flat&logo=python)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.4-orange?style=flat&logo=scikit-learn)
-![XGBoost](https://img.shields.io/badge/XGBoost-2.0-red?style=flat)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.35-FF4B4B?style=flat&logo=streamlit)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-FF6600?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-FF4B4B?style=flat&logo=streamlit)](https://fraud-detection-amdox.streamlit.app)
+---
+
+## 🌐 Live Demo
+
+[![Streamlit App](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://fraud-detection-amdox.streamlit.app)
 
 ---
 
@@ -31,6 +38,33 @@ Credit card and financial fraud causes billions of dollars in losses globally ev
 - Exporting predictions with risk levels (Low / Medium / High) for business use
 
 ---
+
+## 📊 Dataset
+
+| Property | Details |
+|---|---|
+| Source | Synthetic Financial Transactions Dataset |
+| Total Records | 50,000 transactions |
+| Fraud Cases | ~32% (handled via SMOTE) |
+| Features | 14 attributes |
+| File Format | CSV |
+
+---
+
+## 🤖 Models & Results
+
+| Model | Accuracy | ROC-AUC |
+|---|---|---|
+| Logistic Regression | 98.60% | 0.9720 |
+| Decision Tree | 99.33% | 0.8921 |
+| Random Forest ⭐ | 99.90% | 0.9829 |
+| XGBoost | 98.91% | 0.9825 |
+| Isolation Forest | 99.83% | 0.9079 |
+
+> ⭐ Best performing model saved to `models/best_model.pkl`
+
+---
+
 
 ## 📁 Project Structure
 ```
@@ -72,53 +106,6 @@ Financial-Fraud-Detection/
 ```
 ---
 
-## 📊 Dataset
-
-| Property | Details |
-|---|---|
-| Source | Synthetic Financial Transactions Dataset |
-| Total Records | 50,000 transactions |
-| Fraud Cases | ~32% (handled via SMOTE) |
-| Features | 14 attributes |
-| File Format | CSV |
-
-### Feature Description
-
-| Feature | Type | Description |
-|---|---|---|
-| Transaction_ID | ID | Unique transaction identifier |
-| User_ID | ID | Unique user identifier |
-| Transaction_Amount | Numerical | Amount in USD |
-| Transaction_Type | Categorical | POS / Online / Bank Transfer / Withdrawal |
-| Account_Balance | Numerical | User account balance at time of transaction |
-| Device_Type | Categorical | Mobile / Desktop / Laptop |
-| Location | Categorical | City of transaction |
-| Merchant_Category | Categorical | Type of merchant |
-| Card_Type | Categorical | Visa / Mastercard / Amex |
-| Previous_Fraudulent_Activity | Binary | 1 if user had prior fraud history |
-| Daily_Transaction_Count | Numerical | Number of transactions that day |
-| Card_Age | Numerical | Age of card in days |
-| Date | DateTime | Transaction date |
-| Fraud_Label | Binary | 0 = Legitimate, 1 = Fraud |
-
----
-
-## ⚙️ Tech Stack
-
-| Category | Tools |
-|---|---|
-| Language | Python 3.12 |
-| Data Processing | Pandas, NumPy |
-| Visualization | Matplotlib, Seaborn, Plotly |
-| Machine Learning | Scikit-learn, XGBoost |
-| Class Balancing | imbalanced-learn (SMOTE) |
-| Dashboard | Streamlit |
-| Model Serialization | Joblib |
-| Environment | VS Code, Jupyter Notebook |
-| Version Control | Git, GitHub |
-
----
-
 ## 🔬 Methodology
 
 ### 1. Exploratory Data Analysis
@@ -150,20 +137,6 @@ Financial-Fraud-Detection/
 - Best model saved as `.pkl` file
 - Predictions exported to CSV with Fraud Probability and Risk Level
 - Interactive Streamlit dashboard for real-time predictions
-
----
-
-## 🤖 Models & Results
-
-| Model | Accuracy | ROC-AUC |
-|---|---|---|
-| Logistic Regression | 98.60% | 0.9720 |
-| Decision Tree | 99.33% | 0.8921 |
-| Random Forest ⭐ | 99.90% | 0.9829 |
-| XGBoost | 98.91% | 0.9825 |
-| Isolation Forest | 99.83% | 0.9079 |
-
-> ⭐ Best performing model saved to `models/best_model.pkl`
 
 ---
 
@@ -204,6 +177,20 @@ The Streamlit dashboard has **5 interactive pages:**
 
 ---
 
+## 📷 Screenshots
+
+| Overview | EDA & Patterns |
+|---|---|
+| ![Overview](screenshots/dashboard_overview.png) | ![EDA](screenshots/dashboard_eda.png) |
+
+| Model Performance | Live Prediction |
+|---|---|
+| ![Models](screenshots/dashboard_model_performance.png) | ![Live](screenshots/dashboard_live_prediction.png) |
+
+![Transaction Table](screenshots/dashboard_transaction_table.png)
+
+---
+
 ## 🚀 How to Run
 
 ### 1. Clone the Repository
@@ -231,22 +218,6 @@ Open `notebooks/Financial_Fraud_Detection.ipynb` in VS Code and run all cells.
 cd dashboard
 streamlit run app.py
 ```
-
----
-
-## 📷 Screenshots
-
-| Overview | EDA & Patterns |
-|---|---|
-| ![Overview](screenshots/dashboard_overview.png) | ![EDA](screenshots/dashboard_eda.png) |
-
-| Model Performance | Live Prediction |
-|---|---|
-| ![Models](screenshots/dashboard_model_performance.png) | ![Live](screenshots/dashboard_live_prediction.png) |
-
-![Transaction Table](screenshots/dashboard_transaction_table.png)
-
----
 
 ---
 

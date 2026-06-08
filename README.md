@@ -17,7 +17,7 @@
 
 ---
 
-## 📌 Overview
+## 📌 Overview   
 
 Financial fraud is one of the most critical challenges faced by banks, fintech companies, and payment gateways worldwide. This project presents a **production-ready, end-to-end machine learning system** built during my internship at **Amdox Technologies** to automatically detect fraudulent financial transactions in real time.
 

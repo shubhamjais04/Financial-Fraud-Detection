@@ -55,6 +55,11 @@ Financial-Fraud-Detection/
 │
 ├── notebooks/
 │   └── Financial_Fraud_Detection.ipynb
+├── powerbi/
+│   ├── dashboard_preview
+│   ├── fraud_dashboard_compact
+│   ├── PowerBI-Dashboard
+│   ├── prepare_powerbi_data
 │
 ├──reports/
 │   ├── Financial_Fraud_Detection_Presentation.pptx

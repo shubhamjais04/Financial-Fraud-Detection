@@ -87,8 +87,12 @@ if page == "📊 Overview":
     st.markdown("**End-to-end ML pipeline to detect fraudulent transactions — Amdox Technologies**")
     st.divider()
 
-    total = len(df)
-    fraud = df['Class'].sum()
+    # True dataset totals (hardcoded — df is a downsampled export for deployment
+    # size limits, so len(df)/df['Class'].sum() would misrepresent the real
+    # fraud rate). All 492 fraud rows are preserved in df, so fraud-only stats
+    # like avg_fraud_amt below are still accurate.
+    total = 284807
+    fraud = 492
     legit = total - fraud
     fraud_rate = fraud / total * 100
     avg_fraud_amt = df[df['Class']==1]['Amount_log'].mean()
@@ -98,6 +102,9 @@ if page == "📊 Overview":
     c2.metric("Fraudulent", f"{fraud:,}", f"{fraud_rate:.4f}%", delta_color='inverse')
     c3.metric("Legitimate", f"{legit:,}")
     c4.metric("Avg Fraud Log-Amount", f"{avg_fraud_amt:.2f}")
+    st.caption(f"Charts below are rendered from a {len(df):,}-row sample "
+               f"(all {fraud} fraud cases + {len(df) - fraud:,} sampled legitimate "
+               f"transactions) for deployment size limits.")
 
     st.divider()
     col1, col2 = st.columns(2)

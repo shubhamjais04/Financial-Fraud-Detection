@@ -250,13 +250,34 @@ elif page == "🤖 Model Performance":
         fig2.update_layout(yaxis_range=[0.85, 1.0])
         st.plotly_chart(fig2, use_container_width=True)
 
+    def find_chart(filename):
+        import os
+        for path in [f'../exports/notebook_charts/{filename}',
+                     f'exports/notebook_charts/{filename}']:
+            if os.path.exists(path):
+                return path
+        return None
+
     st.subheader("Saved Charts from Notebook")
     col3, col4 = st.columns(2)
     with col3:
-        st.image('../exports/notebook_charts/img_roc_comparison.png', caption='ROC Curve Comparison')
+        chart = find_chart('img_roc_comparison.png')
+        if chart:
+            st.image(chart, caption='ROC Curve Comparison')
+        else:
+            st.info("ROC Curve Comparison chart not found.")
     with col4:
-        st.image('../exports/notebook_charts/img_feature_importance.png', caption='Feature Importance')
-    st.image('../exports/notebook_charts/img_model_comparison.png', caption='Model Accuracy & AUC Comparison')
+        chart = find_chart('img_feature_importance.png')
+        if chart:
+            st.image(chart, caption='Feature Importance')
+        else:
+            st.info("Feature Importance chart not found.")
+
+    chart = find_chart('img_model_comparison.png')
+    if chart:
+        st.image(chart, caption='Model Accuracy & AUC Comparison')
+    else:
+        st.info("Model Accuracy & AUC Comparison chart not found.")
 
 # ── PAGE 4: LIVE PREDICTION ───────────────────────────────────
 elif page == "🔎 Live Prediction":

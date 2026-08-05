@@ -17,7 +17,7 @@ Financial fraud is one of the most critical challenges faced by banks, fintech c
 
 The system covers the complete data science lifecycle — from raw data ingestion and exploratory analysis, through feature engineering and model training, to an interactive multi-page **Streamlit dashboard** with live fraud prediction capability.
 
-The dataset contains **50,000 real-world synthetic transactions** across multiple locations, device types, merchant categories, and card types — making this one of the most comprehensive fraud detection pipelines built at the internship level.
+The dataset is the real, anonymized European cardholder transaction data (Kaggle's Credit Card Fraud Detection dataset), containing 284,807 transactions with only 492 labeled as fraud — a 0.17% fraud rate that makes this a genuinely hard imbalanced classification problem.
 
 ---
 
@@ -56,6 +56,12 @@ Financial-Fraud-Detection/
 ├── notebooks/
 │   └── Financial_Fraud_Detection.ipynb
 │
+├── powerbi/
+│   ├── dashboard_preview
+│   ├── fraud_dashboard_compact
+│   ├── PowerBI-Dashboard
+│   ├── prepare_powerbi_data
+│
 ├──reports/
 │   ├── Financial_Fraud_Detection_Presentation.pptx
 │   └── Financial_Fraud_Detection_Presentation.pdf
@@ -73,34 +79,15 @@ Financial-Fraud-Detection/
 ```
 ---
 
-## 📊 Dataset
+## 📊 Dataset 
 
 | Property | Details |
 |---|---|
 | Source | Synthetic Financial Transactions Dataset |
-| Total Records | 50,000 transactions |
-| Fraud Cases | ~32% (handled via SMOTE) |
-| Features | 14 attributes |
+| Total Records | 284,807 transactions |
+| Fraud Cases |492 (0.17%) |
+| Features | 31 attributes |
 | File Format | CSV |
-
-### Feature Description
-
-| Feature | Type | Description |
-|---|---|---|
-| Transaction_ID | ID | Unique transaction identifier |
-| User_ID | ID | Unique user identifier |
-| Transaction_Amount | Numerical | Amount in USD |
-| Transaction_Type | Categorical | POS / Online / Bank Transfer / Withdrawal |
-| Account_Balance | Numerical | User account balance at time of transaction |
-| Device_Type | Categorical | Mobile / Desktop / Laptop |
-| Location | Categorical | City of transaction |
-| Merchant_Category | Categorical | Type of merchant |
-| Card_Type | Categorical | Visa / Mastercard / Amex |
-| Previous_Fraudulent_Activity | Binary | 1 if user had prior fraud history |
-| Daily_Transaction_Count | Numerical | Number of transactions that day |
-| Card_Age | Numerical | Age of card in days |
-| Date | DateTime | Transaction date |
-| Fraud_Label | Binary | 0 = Legitimate, 1 = Fraud |
 
 ---
 
@@ -130,11 +117,12 @@ Financial-Fraud-Detection/
 - Correlation heatmap across numerical features
 
 ### 2. Data Preprocessing
-- Dropped non-predictive columns (Transaction_ID, User_ID)
-- Extracted Day, Month, Year, DayOfWeek from Date column
-- Label Encoded all categorical features
-- Removed outliers using IQR method on Transaction_Amount
-- Applied **SMOTE** to handle class imbalance
+- Engineered new features from the raw data: Amount_log (log-transformed transaction amount), Hour (extracted from the Time column, seconds since first transaction), and High_Amount (flag for transactions above the 90th percentile)
+- Dropped the original Time and Amount columns after engineering their replacements
+- Split into train/test sets (80/20, stratified) before any resampling, to prevent data leakage
+- Applied StandardScaler, fit on the training set only
+- Applied SMOTE (sampling_strategy=0.5) to the scaled training set only, to correct the 0.17% fraud class imbalance without leaking synthetic samples into the test set
+- Noted that features V1–V28 are already PCA-transformed and anonymized in the source dataset (for cardholder confidentiality), so no additional encoding was needed on them
 
 ### 3. Model Training
 - Train-Test Split: 80% train / 20% test (stratified)
